@@ -1,0 +1,31 @@
+package com.olympus.box.api;
+
+import java.io.IOException;
+
+import com.box.sdk.BoxAPIConnection;
+
+public class BoxAuth {
+
+	
+	
+	
+	public static void main(String[] args) throws IOException {
+		String box_redirect = Config.box_redirect
+			  + "?response_type=code"
+			  + "&client_id=" + Config.client_id 
+			  + "&redirect_uri=" + Config.redirect_uri;
+
+		res.redirect(box_redirect);
+			
+		get("/return", (req, res) -> {
+				  // Capture auth code 
+				  String code = req.queryParams("code");  
+				        		
+				  // Instantiate new Box API connection object
+				  BoxAPIConnection client = new BoxAPIConnection(Config.client_id, Config.client_secret, code);
+				   
+				  // PERFORM API ACTIONS WITH CLIENT
+		});
+	
+	}
+}

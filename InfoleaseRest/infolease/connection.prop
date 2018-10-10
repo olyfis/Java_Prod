@@ -1,0 +1,6 @@
+myHost = 10.160.113.129
+myAccount =  /info/PROD9F/PROD9F_SQL
+userID = PROD9F 
+passWord = 9FPROD 
+dbClass= com.rs.u2.jdbc.UniJDBCDriver
+dbmsType = UNIDATA
